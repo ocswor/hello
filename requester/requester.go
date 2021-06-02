@@ -280,7 +280,7 @@ func (b *Work) printRequest(c *http.Client) {
 		size = resp.ContentLength
 		code = resp.StatusCode
 		body, _ := ioutil.ReadAll(resp.Body)
-		fmt.Println(string(body))
+		fmt.Println("请求结果:",string(body))
 		resp.Body.Close()
 	}
 	t := now()
